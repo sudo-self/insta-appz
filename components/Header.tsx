@@ -12,14 +12,6 @@ export default function Header() {
           <span className="text-green-600">apps.</span>JesseJesse.com
         </h1>
       </Link>
-      <a
-        href="https://github.com/sudo-self/insta-appz"
-        target="_blank"
-        className="ml-auto hidden items-center gap-3 rounded-2xl bg-white dark:bg-[#1E293B] dark:text-gray-100 px-6 py-2 sm:flex border border-green-200 dark:border-green-700"
-      >
-        <GithubIcon className="h-4 w-4 dark:text-green-400" />
-        <span>sudo-self</span>
-      </a>
     </header>
   );
 }
