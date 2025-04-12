@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import * as shadcnComponents from "@/utils/shadcn";
 import { Sandpack } from "@codesandbox/sandpack-react";
 import {
@@ -8,6 +9,9 @@ import {
 } from "@codesandbox/sandpack-react/unstyled";
 import { dracula as draculaTheme } from "@codesandbox/sandpack-themes";
 import dedent from "dedent";
+import JSZip from "jszip";
+import { Button } from "@/components/Button";
+import { saveAs } from "file-saver";
 import "./code-viewer.css";
 
 export default function CodeViewer({
@@ -17,36 +21,68 @@ export default function CodeViewer({
   code: string;
   showEditor?: boolean;
 }) {
-  return showEditor ? (
-    <Sandpack
-      options={{
-        showNavigator: true,
-        editorHeight: "80vh",
-        showTabs: false,
-        ...sharedOptions,
-      }}
-      files={{
-        "App.tsx": code,
-        ...sharedFiles,
-      }}
-      {...sharedProps}
-    />
-  ) : (
-    <SandpackProvider
-      files={{
-        "App.tsx": code,
-        ...sharedFiles,
-      }}
-      className="flex h-full w-full grow flex-col justify-center"
-      options={{ ...sharedOptions }}
-      {...sharedProps}
-    >
-      <SandpackPreview
-        className="flex h-full w-full grow flex-col justify-center p-4 md:pt-16"
-        showOpenInCodeSandbox={false}
-        showRefreshButton={false}
-      />
-    </SandpackProvider>
+  const [isLoading, setIsLoading] = useState(false);
+
+
+  async function handleDownload() {
+    setIsLoading(true);
+
+    const zip = new JSZip();
+
+    zip.file("App.tsx", code);
+
+
+    for (const [path, fileContent] of Object.entries(sharedFiles)) {
+      zip.file(path.startsWith("/") ? path.slice(1) : path, fileContent);
+    }
+
+
+    const content = await zip.generateAsync({ type: "blob" });
+    saveAs(content, "YourApp.zip");
+
+    setIsLoading(false);
+  }
+
+  return (
+    <div className="relative h-full w-full">
+      {showEditor ? (
+        <Sandpack
+          options={{
+            showNavigator: true,
+            editorHeight: "80vh",
+            showTabs: false,
+            ...sharedOptions,
+          }}
+          files={{
+            "App.tsx": code,
+            ...sharedFiles,
+          }}
+          {...sharedProps}
+        />
+      ) : (
+        <SandpackProvider
+          files={{
+            "App.tsx": code,
+            ...sharedFiles,
+          }}
+          className="flex h-full w-full grow flex-col justify-center"
+          options={{ ...sharedOptions }}
+          {...sharedProps}
+        >
+          <SandpackPreview
+            className="flex h-full w-full grow flex-col justify-center p-4 md:pt-16"
+            showOpenInCodeSandbox={false}
+            showRefreshButton={false}
+          />
+        </SandpackProvider>
+      )}
+
+      <div className="absolute bottom-[4px] left-4 bg-green-700 hover:bg-indigo-600">
+        <Button onClick={handleDownload} isLoading={isLoading}>
+          Download APP
+        </Button>
+      </div>
+    </div>
   );
 }
 
@@ -153,5 +189,6 @@ let sharedFiles = {
         <div id="root"></div>
       </body>
     </html>
-  `,
+  `, // Ensure the closing quote and braces are correct
 };
+
