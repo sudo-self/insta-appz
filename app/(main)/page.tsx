@@ -235,7 +235,7 @@ export default function Home() {
                 >
                   <p className="animate-pulse text-3xl font-bold dark:text-gray-100">
                     {status === "creating"
-                      ? "Building Your Idea.."
+                      ? "Building Your App"
                       : "Updating App.."}
                   </p>
                 </motion.div>
