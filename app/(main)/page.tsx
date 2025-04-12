@@ -10,6 +10,7 @@ import * as Switch from "@radix-ui/react-switch";
 import { AnimatePresence, motion } from "framer-motion";
 import { FormEvent, useEffect, useState } from "react";
 import LoadingDots from "../../components/loading-dots";
+import { useRouter } from 'next/navigation';
 
 function removeCodeFormatting(code: string): string {
   return code.replace(/```(?:typescript|javascript|tsx)?\n([\s\S]*?)```/g, '$1').trim();
@@ -109,14 +110,18 @@ export default function Home() {
         href="https://insta-appz.vercel.app"
         target="_blank"
       >
-        <span className="text-center">
-          <span className="font-medium text-green-400">sudo-self</span>
-        </span>
+          <span
+               className="cursor-pointer text-center reset-button"
+             >
+               <span className="font-medium text-red-600">RELOAD</span>
+             </span>
+
       </a>
           <h1 className="my-6 max-w-3xl text-4xl font-extrabold text-gray-800 dark:text-white sm:text-6xl">
-            Build&nbsp;<span className="text-green-600">Powerful Apps</span>
-            <br />with just&nbsp;<span className="text-green-600">one sentence</span>!
+            <span className="block">Build Powerful&nbsp;<span className="text-green-600">Apps</span></span>
+            <span className="block mt-2">with just&nbsp;<span className="text-green-600">one</span> sentence!</span>
           </h1>
+
 
 
       <form className="w-full max-w-xl" onSubmit={createApp}>
@@ -132,13 +137,13 @@ export default function Home() {
                   onChange={(e) => setPrompt(e.target.value)}
                   name="prompt"
                   className="w-full resize-none rounded-l-3xl bg-transparent px-6 py-5 text-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-500 dark:text-gray-100 dark:placeholder-gray-400"
-                  placeholder="build me a word search game."
+                  placeholder="build a gradient colored calculator app"
                 />
               </div>
               <button
                 type="submit"
                 disabled={loading}
-                className="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-3xl px-3 py-2 text-sm font-semibold text-blue-500 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-500 disabled:text-gray-900 dark:disabled:text-gray-400"
+                className="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-3xl px-3 py-2 text-sm font-semibold text-green-500 hover:text-green-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-500 disabled:text-green-700 dark:disabled:text-green-400"
               >
                 {status === "creating" ? (
                   <LoadingDots color="black" style="large" />
@@ -150,17 +155,17 @@ export default function Home() {
           </div>
           <div className="mt-6 flex flex-col justify-center gap-4 sm:flex-row sm:items-center sm:gap-8">
             <div className="flex items-center justify-between gap-3 sm:justify-center">
-              <p className="text-gray-500 dark:text-gray-400 sm:text-xs">Model:</p>
+              <p className="text-gray-500 dark:text-gray-400 sm:text-xs">select a model</p>
               <Select.Root
                 name="model"
                 disabled={loading}
                 value={model}
                 onValueChange={(value) => setModel(value)}
               >
-                <Select.Trigger className="group flex w-60 max-w-xs items-center rounded-2xl border-[6px] border-gray-300 dark:border-gray-700 bg-white dark:bg-[#1E293B] px-4 py-2 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-500">
+                <Select.Trigger className="group flex w-60 max-w-xs items-center rounded-2xl border-[6px] border-gray-300 dark:border-green-700 bg-white dark:bg-[#1E293B] px-4 py-2 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-500">
                   <Select.Value />
                   <Select.Icon className="ml-auto">
-                    <ChevronDownIcon className="size-6 text-gray-300 group-focus-visible:text-gray-500 group-enabled:group-hover:text-gray-500 dark:text-gray-600 dark:group-focus-visible:text-gray-400 dark:group-enabled:group-hover:text-gray-400" />
+                    <ChevronDownIcon className="size-6 text-gray-300 group-focus-visible:text-gray-500 group-enabled:group-hover:text-gray-500 dark:text-gray-600 dark:group-focus-visible:text-green-400 dark:group-enabled:group-hover:text-gray-400" />
                   </Select.Icon>
                 </Select.Trigger>
                 <Select.Portal>
@@ -230,8 +235,8 @@ export default function Home() {
                 >
                   <p className="animate-pulse text-3xl font-bold dark:text-gray-100">
                     {status === "creating"
-                      ? "Building App..."
-                      : "Updating App..."}
+                      ? "Building Your Idea.."
+                      : "Updating App.."}
                   </p>
                 </motion.div>
               )}
