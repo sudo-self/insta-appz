@@ -106,17 +106,17 @@ export default function Home() {
   return (
     <main className="mt-12 flex w-full flex-1 flex-col items-center px-4 text-center sm:mt-1">
       <a
-        className="mb-4 inline-flex h-7 shrink-0 items-center gap-[9px] rounded-[50px] border-[0.5px] border-solid border-[#E6E6E6] bg-[rgba(234,238,255,0.65)] dark:bg-[rgba(30,41,59,0.5)] dark:border-gray-700 px-7 py-5 shadow-[0px_1px_1px_0px_rgba(0,0,0,0.25)]"
-        href="https://insta-appz.vercel.app"
-        target="_blank"
-      >
-          <span
-               className="cursor-pointer text-center reset-button"
-             >
-               <span className="font-medium text-red-600">RELOAD</span>
-             </span>
+  href="https://github.com/sudo-self/insta-appz"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img 
+    src="https://img.shields.io/github/stars/sudo-self?style=social" 
+    alt="GitHub stars" 
+    className="mb-4 inline-flex h-7"
+  />
+</a>
 
-      </a>
           <h1 className="my-6 max-w-3xl text-4xl font-extrabold text-gray-800 dark:text-white sm:text-6xl">
             <span className="block">Build Powerful&nbsp;<span className="text-green-600">Apps</span></span>
             <span className="block mt-2">with just&nbsp;<span className="text-green-600">one</span> sentence!</span>
