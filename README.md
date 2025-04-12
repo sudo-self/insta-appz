@@ -16,3 +16,83 @@ POSTGRES_URL_NON_POOLING=your-postgres-url-non-pooling<br>
 GOOGLE_AI_API_KEY=your-google-ai-api-key<br>
 </code>
 
+
+### Api Request
+
+```bash
+curl -X POST https://insta-appz.vercel.app/api/generateCode \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "gemini-1.5-pro",
+    "messages": [
+      {
+        "role": "user",
+        "content": "create a simple react counter component"
+      }
+    ]
+  }'
+```
+
+### Responce 
+
+
+```bash
+import React, { useState } from 'react';
+
+interface CounterProps {
+}
+
+const Counter: React.FC<CounterProps> = () => {
+  const [count, setCount] = useState(0);
+
+  const increment = () => {
+    setCount(prevCount => prevCount + 1);
+  };
+
+  const decrement = () => {
+    setCount(prevCount => prevCount - 1);
+  };
+
+  const reset = () => {
+    setCount(0);
+  };
+
+  return (
+    <div className="p-8 flex flex-col items-center justify-center space-y-4">
+      <div className="text-3xl font-bold text-slate-800">{count}</div>
+      <div className="flex space-x-4">
+        <button
+          onClick={increment}
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Increment
+        </button>
+        <button
+          onClick={decrement}
+          className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded"
+          disabled={count === 0}
+        >
+          Decrement
+        </button>
+        <button
+          onClick={reset}
+          className="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default Counter;
+```
+
+<br />
+
+**Note** <br>
+[insta-appz](https://insta-appz.vercel.app) exports `YourApp.zip` via .tsx
+
+
+
+
