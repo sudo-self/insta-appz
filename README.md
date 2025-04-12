@@ -1,15 +1,1 @@
-# [create powerful apps](https://insta-appz.vercel.app/)
-<img width="1440" alt="Screenshot 2025-04-12 at 00 33 40" src="https://github.com/user-attachments/assets/b0f77104-2e74-452e-aa25-d01d06f87bdc" />
-<br />
-
-### Variables<br>
-
-<code>
-PGHOST_UNPOOLED=your_pg_host<br>
-POSTGRES_URL_NO_SSL=your_postgres_url_no_ssl<br>
-PGUSER=your_pg_user<br>
-POSTGRES_PASSWORD=your_postgres_password<br>
-POSTGRES_DATABASE=your_postgres_database<br>
-POSTGRES_URL_NON_POOLING=your_postgres_url_non_pooling<br>
-GOOGLE_AI_API_KEY=your_google_ai_api_key<br>
-</code>
+# create apps with one prompt

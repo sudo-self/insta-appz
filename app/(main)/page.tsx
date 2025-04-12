@@ -137,7 +137,7 @@ export default function Home() {
                   onChange={(e) => setPrompt(e.target.value)}
                   name="prompt"
                   className="w-full resize-none rounded-l-3xl bg-transparent px-6 py-5 text-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-green-500 dark:text-gray-100 dark:placeholder-gray-400"
-                  placeholder="build a gradient colored calculator app"
+                  placeholder="build a calculator app"
                 />
               </div>
               <button
