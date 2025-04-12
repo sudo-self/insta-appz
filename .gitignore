@@ -1,0 +1,36 @@
+# Node modules
+node_modules/
+
+# Build output
+.next/
+dist/
+out/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS metadata
+.env
+.env.*.local
+
+# Vercel/Netlify config (if using)
+.vercel/
+.netlify/
+
+# IDE files
+.vscode/
+.idea/
+
+# Optional: macOS system files
+*.swp
+*.swo
+
+# Optional: coverage from testing tools
+coverage/
+
