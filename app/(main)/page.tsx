@@ -234,7 +234,7 @@ export default function Home() {
                   className="absolute inset-x-0 bottom-0 top-1/2 flex items-center justify-center rounded-r border border-gray-400 dark:border-gray-700 bg-gradient-to-br from-gray-100 to-gray-300 dark:from-[#1E293B] dark:to-gray-800 md:inset-y-0 md:left-1/2 md:right-0"
                 >
                  <p className="animate-pulse text-3xl font-bold dark:text-gray-100">
-  {status === "creating" ? "Paper Jam" : "Aborting"}
+  {status === "creating" ? "Building Your App" : "Firmware Updated"}
 </p>
 
                 </motion.div>
