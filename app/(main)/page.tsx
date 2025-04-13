@@ -11,7 +11,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { FormEvent, useEffect, useState } from "react";
 import LoadingDots from "../../components/loading-dots";
 import { useRouter } from 'next/navigation';
-import Drawer from "../../components/Drawer";
 
 function removeCodeFormatting(code: string): string {
   return code.replace(/```(?:typescript|javascript|tsx)?\n([\s\S]*?)```/g, '$1').trim();
@@ -95,12 +94,6 @@ export default function Home() {
     setInitialAppConfig({ model });
     setStatus("created");
   }
-  const App = () => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
-  const toggleDrawer = () => {
-    setIsDrawerOpen(!isDrawerOpen);
-  };
 
   useEffect(() => {
     let el = document.querySelector(".cm-scroller");
@@ -112,44 +105,24 @@ export default function Home() {
 
   return (
     <main className="mt-12 flex w-full flex-1 flex-col items-center px-4 text-center sm:mt-1">
-         <a href="https://github.com/sudo-self/insta-appz" target="_blank" rel="noopener noreferrer">
-        <img 
-          src="https://img.shields.io/github/stars/sudo-self?style=social" 
-          alt="GitHub stars" 
-          className="mb-4 inline-flex h-7"
-        />
-      </a>
+      <a
+  href="https://github.com/sudo-self/insta-appz"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <img 
+    src="https://img.shields.io/github/stars/sudo-self?style=social" 
+    alt="GitHub stars" 
+    className="mb-4 inline-flex h-7"
+  />
+</a>
 
-      {/* Heading Section */}
-      <h1 className="my-6 max-w-3xl text-4xl font-extrabold text-gray-800 dark:text-white sm:text-6xl">
-        <span className="block">Build Powerful&nbsp;<span className="text-green-600">Apps</span></span>
-        <span className="block mt-2">with just&nbsp;<span className="text-green-600">one</span> sentence!</span>
-      </h1>
+          <h1 className="my-6 max-w-3xl text-4xl font-extrabold text-gray-800 dark:text-white sm:text-6xl">
+            <span className="block">Build Powerful&nbsp;<span className="text-green-600">Apps</span></span>
+            <span className="block mt-2">with just&nbsp;<span className="text-green-600">one</span> sentence!</span>
+          </h1>
 
-      {/* Button to Toggle Drawer */}
-      <div>
-        <button
-          onClick={toggleDrawer}
-          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-        >
-          {isDrawerOpen ? 'Close Drawer' : 'Open Drawer'}
-        </button>
-      </div>
 
-      {/* Conditionally Render Drawer when Open */}
-      {isDrawerOpen && (
-        <div className="fixed top-0 left-0 right-0 bottom-0 bg-gray-900 bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h2 className="text-xl font-bold mb-4">Drawer Content</h2>
-            <p>This is where the drawer content goes.</p>
-            <button
-              onClick={toggleDrawer}
-              className="mt-4 px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
-            >
-              Close Drawer
-            </button>
-          </div>
-        </div>
 
       <form className="w-full max-w-xl" onSubmit={createApp}>
         <fieldset disabled={loading} className="disabled:opacity-75">
