@@ -121,7 +121,7 @@ export default function Home() {
           className="font-semibold text-green-600 underline-offset-4 transition hover:text-green-700 hover:underline"
           target="_blank"
         >
-          NextJS
+          NextJS&nbsp;
         </a>&nbsp;React Framework
       </div>
 
