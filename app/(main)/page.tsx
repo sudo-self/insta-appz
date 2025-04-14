@@ -111,7 +111,7 @@ export default function Home() {
   rel="noopener noreferrer"
 >
   <img 
-    src="https://img.shields.io/badge/npx-create--react--tsx-blue" 
+    src="https://img.shields.io/badge/npm%20i-create--react--tsx-red" 
     alt="Badge Preview"
     className="mb-4 inline-flex h-7"
   />
