@@ -107,7 +107,7 @@ export default function Home() {
   return (
     <main className="mt-12 flex w-full flex-1 flex-col items-center px-4 text-center sm:mt-1">
       <a
-        href="https://github.com/sudo-self/insta-appz"
+        href="https://www.npmjs.com/package/create-react-tsx"
         target="_blank"
         rel="noopener noreferrer"
       >
