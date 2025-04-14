@@ -122,7 +122,7 @@ export default function Home() {
           target="_blank"
         >
           NextJS&nbsp;
-        </a>on vercel
+        </a>on Vercel
       </div>
 
 
