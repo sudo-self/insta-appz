@@ -106,6 +106,24 @@ export default function Home() {
 
   return (
     <main className="mt-12 flex w-full flex-1 flex-col items-center px-4 text-center sm:mt-1">
+       <div className="font-medium">
+        Powered by{" "}
+        <a
+          href="https://gemini.google.com/app"
+          className="font-semibold text-green-600 underline-offset-4 transition hover:text-green-700 hover:underline"
+          target="_blank"
+        >
+          Gemini
+        </a>{" "}
+        and{" "}
+        <a
+          href="https://nextjs.org"
+          className="font-semibold text-green-600 underline-offset-4 transition hover:text-green-700 hover:underline"
+          target="_blank"
+        >
+          NextJS
+        </a>
+      </div>
 
 
 
