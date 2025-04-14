@@ -122,7 +122,7 @@ export default function Home() {
           target="_blank"
         >
           NextJS&nbsp;
-        </a>&nbsp;React Framework
+        </a>on vercel
       </div>
 
 
