@@ -115,13 +115,13 @@ export default function Home() {
         >
           Gemini
         </a>{" "}
-        &nbsp;&&ansp;{" "}
+        &nbsp;&&nbsp;{" "}
         <a
           href="https://nextjs.org"
           className="font-semibold text-green-600 underline-offset-4 transition hover:text-green-700 hover:underline"
           target="_blank"
         >
-          Next.js 14
+          Next.js
         </a>
       </div>
 
