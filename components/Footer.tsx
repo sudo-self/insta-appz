@@ -3,25 +3,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="mb-3 mt-5 flex w-full flex-col items-center justify-center space-y-3 px-3 pt-4 text-center sm:mb-0 sm:h-20 sm:flex-col sm:space-y-4 sm:pt-2">
-      <div className="font-medium">
-        Powered by{" "}
-        <a
-          href="https://gemini.google.com/app"
-          className="font-semibold text-green-600 underline-offset-4 transition hover:text-green-700 hover:underline"
-          target="_blank"
-        >
-          Gemini
-        </a>{" "}
-        and{" "}
-        <a
-          href="https://nextjs.org"
-          className="font-semibold text-green-600 underline-offset-4 transition hover:text-green-700 hover:underline"
-          target="_blank"
-        >
-          NextJS
-        </a>
-      </div>
-
+     
       {/* Badges Centered */}
       <div className="flex space-x-4">
         <a
