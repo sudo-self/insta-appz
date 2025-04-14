@@ -9,7 +9,7 @@ export default function Header() {
       <Link href="/" className="absolute flex items-center gap-2">
         <Image alt="header text" src={logo} className="h-6 w-6" />
         <h1 className="text-xl tracking-tight">
-          <span className="text-green-600">apps.</span>JesseJesse.com
+          <span className="text-green-600">insta-</span>appz
         </h1>
       </Link>
     </header>
