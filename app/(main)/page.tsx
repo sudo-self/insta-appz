@@ -110,12 +110,13 @@ export default function Home() {
   target="_blank"
   rel="noopener noreferrer"
 >
-  <img 
-    src="https://img.shields.io/badge/npm%20i-create--react--tsx-red" 
-    alt="Badge Preview"
-    className="mb-4 inline-flex h-7"
-  />
-</a>
+
+      <img 
+  src="https://img.shields.io/badge/npm%20i-create--react--tsx-blue?style=flat&logoWidth=20" 
+  alt="Badge Preview"
+  style="height: 20px;"
+/>
+
 
           <h1 className="my-6 max-w-3xl text-4xl font-extrabold text-gray-800 dark:text-white sm:text-6xl">
             <span className="block">Build Powerful&nbsp;<span className="text-green-600">Apps</span></span>
