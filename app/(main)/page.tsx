@@ -122,7 +122,7 @@ export default function Home() {
           target="_blank"
         >
           Next.js
-        </a>Framework
+        </a>&nbsp;Framework
       </div>
 
 
