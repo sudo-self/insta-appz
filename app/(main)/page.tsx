@@ -110,7 +110,7 @@ export default function Home() {
         Google&nbsp;{" "}
         <a
           href="https://gemini.google.com/app"
-          className="font-semibold text-green-600 underline-offset-4 transition hover:text-green-700 hover:underline"
+          className="font-semibold text-blue-600 underline-offset-4 transition hover:text-green-700 hover:underline"
           target="_blank"
         >
           Gemini
@@ -122,7 +122,7 @@ export default function Home() {
           target="_blank"
         >
           NextJS&nbsp;
-        </a>on Vercel
+        </a>Vercel
       </div>
 
 
