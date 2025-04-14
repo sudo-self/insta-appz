@@ -106,13 +106,33 @@ export default function Home() {
 
   return (
     <main className="mt-12 flex w-full flex-1 flex-col items-center px-4 text-center sm:mt-1">
-     <a href="https://sudo-self.github.io/create-react-tsx/" target="_blank" rel="noopener noreferrer" class="inline-block transition-transform hover:scale-105">
-  <img 
-    src="https://img.shields.io/badge/npx-create--react--tsx-blue?style=flat&logo=typescript&logoColor=white&logoWidth=20" 
-    alt="npx create-react-tsx badge" 
-    style="height: 28px;" 
-  />
-</a>
+   <div className="flex space-x-4 mb-4">
+  <a
+    href="https://sudo-self.github.io/create-react-tsx/"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img 
+      src="https://img.shields.io/badge/npx-create--react--tsx-blue?style=flat&logo=typescript&logoColor=white&logoWidth=20" 
+      alt="npx Badge"
+      className="inline-flex"
+      style={{ height: "28px" }}
+    />
+  </a>
+
+  <a
+    href="https://www.npmjs.com/package/create-react-tsx"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img 
+      src="https://img.shields.io/badge/npm%20i-create--react--tsx-red?style=flat&logo=npm&logoColor=white&logoWidth=20" 
+      alt="npm Badge"
+      className="inline-flex"
+      style={{ height: "28px" }}
+    />
+  </a>
+</div>
 
 
           <h1 className="my-6 max-w-3xl text-4xl font-extrabold text-gray-800 dark:text-white sm:text-6xl">
