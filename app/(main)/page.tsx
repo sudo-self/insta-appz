@@ -111,11 +111,13 @@ export default function Home() {
   rel="noopener noreferrer"
 >
 
-      <img 
+     <img 
   src="https://img.shields.io/badge/npm%20i-create--react--tsx-blue?style=flat&logoWidth=20" 
   alt="Badge Preview"
-  style="height: 20px;"
+  className="mb-4 inline-flex"
+  style={{ height: "20px" }} 
 />
+
 
 
           <h1 className="my-6 max-w-3xl text-4xl font-extrabold text-gray-800 dark:text-white sm:text-6xl">
