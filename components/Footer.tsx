@@ -25,7 +25,7 @@ export default function Footer() {
           rel="noopener noreferrer"
         >
           <img 
-            src="https://img.shields.io/badge/npm%20i-create--react--tsx-blue?style=flat&logo=npm&logoColor=white&logoWidth=20" 
+            src="https://img.shields.io/badge/npm%20i-create--react--tsx-cyan?style=flat&logo=npm&logoColor=white&logoWidth=20" 
             alt="npm Badge"
             className="inline-flex hover:scale-105 transition-transform duration-300"
             style={{ height: "28px" }}
