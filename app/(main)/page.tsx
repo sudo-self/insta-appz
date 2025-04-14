@@ -106,18 +106,14 @@ export default function Home() {
 
   return (
     <main className="mt-12 flex w-full flex-1 flex-col items-center px-4 text-center sm:mt-1">
-      <a
-        href="https://sudo-self.github.io/create-react-tsx/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img 
-          src="https://img.shields.io/badge/npx%20create--react--tsx-blue?style=flat&logoWidth=20" 
-          alt="Badge Preview"
-          className="mb-4 inline-flex"
-          style={{ height: "20px" }} 
-        />
-      </a>
+     <a href="https://sudo-self.github.io/create-react-tsx/" target="_blank" rel="noopener noreferrer" class="inline-block transition-transform hover:scale-105">
+  <img 
+    src="https://img.shields.io/badge/npx-create--react--tsx-blue?style=flat&logo=typescript&logoColor=white&logoWidth=20" 
+    alt="npx create-react-tsx badge" 
+    style="height: 28px;" 
+  />
+</a>
+
 
           <h1 className="my-6 max-w-3xl text-4xl font-extrabold text-gray-800 dark:text-white sm:text-6xl">
             <span className="block">Build Powerful&nbsp;<span className="text-green-600">Apps</span></span>
