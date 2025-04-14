@@ -111,8 +111,8 @@ export default function Home() {
   rel="noopener noreferrer"
 >
   <img 
-    src="https://img.shields.io/github/stars/sudo-self?style=social" 
-    alt="GitHub stars" 
+    src="https://img.shields.io/badge/npx-create--react--tsx-blue" 
+    alt="Badge Preview"
     className="mb-4 inline-flex h-7"
   />
 </a>
