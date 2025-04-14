@@ -112,7 +112,7 @@ export default function Home() {
         rel="noopener noreferrer"
       >
         <img 
-          src="https://img.shields.io/badge/npx%20i-create--react--tsx-blue?style=flat&logoWidth=20" 
+          src="https://img.shields.io/badge/npx%20create--react--tsx-blue?style=flat&logoWidth=20" 
           alt="Badge Preview"
           className="mb-4 inline-flex"
           style={{ height: "20px" }} 
